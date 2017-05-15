@@ -32,7 +32,7 @@
     "lint-fix": "eslint src -c ./.eslintrc.json --fix",
     "test": "npm run lint",
     "testall": "npm run test && lerna run test",
-    "publish": "node ./.bin/bumpMWVersion.js; lerna run test; lerna publish"
+    "publish": "sh ./.bin/emptyRepo.sh && node ./.bin/bumpMWVersion.js && lerna run test && lerna publish"
   },
   "dependencies": {},
   "devDependencies": {
